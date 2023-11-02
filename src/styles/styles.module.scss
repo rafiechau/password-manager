@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@300;400&display=swap');
+@import './color.scss';
+@import './mixin.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+    background: $background-color;
+    color: $font-color;
+    // border: 1px solid red !important;
+    // overflow-x: hidden;
+}
+
+header{
+    background-color: $background-color;
+    color: $font-color;
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid $border-color;
+    .logo{
+        a{
+            letter-spacing: 5px;
+            font-family: $font-logo;
+            font-size: 1.5rem;
+            color: var(--font-color);
+            text-decoration: none;
+        }
+    }
+    nav {
+        .menutoggle{
+            display: none;
+        }
+        ul{
+            display: flex;
+            list-style: none;   
+            width: 100%;
+            justify-content: space-between;
+            li{
+                margin-right: 20px;
+                background: background-color;
+                color: var(--font-color);
+                a{
+                    text-decoration: none;
+                    padding: 0;
+                    font-size: 0.9em;
+                    transition: all .5s;
+                }
+                a:hover{
+                    color: $hover-color;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 16px;
+    background-color: var(--background-color);
+    .listaccount{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+        .cardaccount{
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 20px;
+            margin-bottom: 10px;
+            a{
+                text-decoration: none;
+            }
+            .listbutton{
+                display: flex;
+                flex-direction: row;
+                margin-top: 20px;
+                gap: 30px;
+                >a:nth-child(1){
+                    width: 50%;
+                    text-align: center;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    background-color: $button-detail
+                }
+                button{
+                    width: 50%;
+                    text-align: center;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $button-delete;
+                }
+            }
+            .title, .descemail, .desccategory, .descpassword{
+                padding: 10px;
+            }
+            .title{
+                font-size: 2rem;
+            }
+            .descemail{
+                display: inline;
+            }
+        }
+        .btnadd{
+            position:fixed;
+            bottom:10px;
+            right:10px;
+            border-radius: 100px;
+            border: none;
+            background: $button-add;
+            color: $font-color;
+            padding: 20px;
+            font-size: 20px;
+            text-decoration: none;
+            z-index: 1;
+            text-align:center;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+            text-align: center;
+            margin: auto;
+        }
+    }
+    .btnaddpage{
+        background-color: $button-add-page;
+        color: $font-color-white;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .formadd{
+        background-color: $background-color;
+        box-shadow: 0 4px 4px 0 $border-color;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form{
+            width: 100%;
+            .formgroup{
+                margin: 8px 0;
+                input, select{
+                    width: 100%;
+                    padding: 8px;
+                    border-radius: 5px;
+                    display: block;
+                    border: 1px solid $border-color;
+                }
+            }
+            button{
+                background-color: $button-add-page;
+                color: $font-color-white;
+                border: 0;
+                border-radius: 5px;
+                width: 100%;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+            
+        }
+    }
+    .detailcard{
+        height: 100px;
+    }
+    
+   
+}
+.listcategory{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 576px) {
+    header{
+        .logo{
+            a{
+                font-size: 1rem;
+            }
+        }
+        nav{
+            ul{
+                font-size: .5rem;
+                margin-left: 5px;
+            }
+            
+            
+        }
+        
+    }
+    main{
+        .listcategory{
+            flex-direction: column;
+        }
+        .containercategory{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    .cardaccount{
+        width: 80%;
+        margin: auto;
+        .listbutton{
+            >a:nth-child(1){
+                width: 10%;
+                text-align: center;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+                background-color: pink
+            }
+            button{
+                width: 10%;
+                text-align: center;
+                padding: 100px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                border-radius: 5px;
+                background-color: $button-delete;
+            }
+        }
+        .descemail{
+            width: 100%;
+            font-size: .6rem;
+        }
+        .descemail, .desccategory{
+            display: block;
+            font-size: .6rem;
+        }
+    }
+    
+}
+    
+
+
+
+
+
+
+
+
