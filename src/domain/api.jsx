@@ -23,4 +23,7 @@ export const postNewPassword = async (formData) => {
     const response = await axios.post('http://localhost:5000/passwords', formData);
     return response.data;
 }
-
+export const deletePassword = async (id) => {
+    const response = await axios.delete(`http://localhost:5000/passwords/${id}`);
+    return response.data;
+}

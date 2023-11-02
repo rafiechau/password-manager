@@ -1,13 +1,6 @@
 {
   "passwords": [
     {
-      "provider": "aaa",
-      "email": "rafie1@gmail.com",
-      "password": "123456",
-      "category": "Family",
-      "id": 8
-    },
-    {
       "provider": "aaaa",
       "email": "rafie13@gmail.com",
       "password": "123456",
@@ -22,11 +15,18 @@
       "id": 10
     },
     {
-      "provider": "pt phincon",
-      "email": "rafie@gmail.com",
+      "provider": "Pt-phincon",
+      "email": "rafie13@gmail.com",
       "password": "123456",
       "category": "Family",
       "id": 11
+    },
+    {
+      "provider": "pt pt",
+      "email": "rafie@gmail.com",
+      "password": "123456",
+      "category": "Work",
+      "id": 12
     }
   ]
 }

@@ -1,4 +1,3 @@
-import axios from "axios";
 import Classes from "../styles/styles.module.scss";
 import FormAdd from "../components/FormAdd";
 import Swal from "sweetalert2";

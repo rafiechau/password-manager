@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import { deletePassword } from '../domain/api';
 
 function DeleteConfirmation({ id, onClose }) {
     const handleDelete = () => {
-        axios.delete(`http://localhost:5000/passwords/${id}`)
+        deletePassword(id)
             .then(() => {
                 alert("Account deleted successfully!");
                 onClose(true);
